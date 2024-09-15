@@ -1,7 +1,8 @@
 #!/bin/sh
 
 echo "#udev id for fan
-SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0403\", ATTRS{idProduct}==\"6001\", SYMLINK+=\"fan0\"" > /tmp/80-fan-udev.rules
+SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0403\", ATTRS{idProduct}==\"6001\", ATTRS{serial}==\"8152B37300\", SYMLINK+=\"fan0\"" > /tmp/80-fan-udev.rules
+
 
 sudo sh -c "cat /tmp/80-fan-udev.rules > /etc/udev/rules.d/80-fan-udev.rules"
 
