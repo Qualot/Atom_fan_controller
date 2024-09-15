@@ -14,3 +14,10 @@ Repository of platformio environment to control fan and relay from m5atom matrix
 rosrun Atom_fan_controller fan_udev_setup.sh              
 ```
 
+# For development
+Link the library following http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup
+```
+cd Atom_fan_controller/lib/
+rosrun rosserial_arduino make_libraries.py .
+```
+
